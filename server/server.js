@@ -40,8 +40,8 @@ app.post("/checkout", async (req, res, next) => {
         quantity: item.quantity,
       })),
       mode: "payment",
-      success_url: "http://localhost:4242/success.html",
-      cancel_url: "http://localhost:4242/cancel.html",
+      success_url: "https://angular-shop-chi.vercel.app/success.html",
+      cancel_url: "https://angular-shop-chi.vercel.app/cancel.html",
     })
     if (session) {
       res.status(200).json(session);

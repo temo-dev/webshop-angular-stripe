@@ -46,7 +46,7 @@ export class CartComponent implements OnInit {
 
   onCheckout(): void {
     this.http
-      .post("http://localhost:4242/checkout", {
+      .post("https://angular-shop-chi.vercel.app/checkout", {
         items: this.cart.items,
       })
       .subscribe(async (res: any) => {
