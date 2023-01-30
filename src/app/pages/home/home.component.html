@@ -8,11 +8,14 @@
   <mat-drawer-content class="p-6">
     <app-products-header
       (columsCountChange)="onColumnsCountChange($event)"
+      (itemsUpdatedChange)="onItemsUpdatedChange($event)"
+      (sortUpdatedChange)="onSortUpdatedChange($event)"
     ></app-products-header>
     <mat-grid-list gutterSize="16" [cols]="cols" [rowHeight]="rowHeight">
       <div *ngFor="let product of products">
         <mat-grid-tile>
           <app-product-box
+            [product]="product"
             (addToCart)="onAddToCart($event)"
             class="w-full"
             [fullWidthMode]="cols === 1"
