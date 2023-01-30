@@ -13,6 +13,7 @@
       <div *ngFor="let product of products">
         <mat-grid-tile>
           <app-product-box
+            (addToCart)="onAddToCart($event)"
             class="w-full"
             [fullWidthMode]="cols === 1"
           ></app-product-box>
